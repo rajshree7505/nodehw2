@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://img.freepik.com/free-vector/gradient-geometric-design-dark-background_23-2148425667.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Box styling */
+        .message-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            text-align: center;
+            display: none; /* Initially hidden */
+        }
+
+        /* Success message */
+        .success-message {
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <!--        <form action="/userlogin" method="post"> </form> -->   <!-- loginuser-->
+    <div class="message-box" id="messageBox">
+        <div class="success-message">User has logged in successfully!</div>
+    </div>
+
+    <script>
+        // Function to display the message box
+        function displayMessage() {
+            document.getElementById('messageBox').style.display = 'block';
+        }
+
+        // Call the function to display the message
+        // You can call this when the user logs in successfully
+        displayMessage();
+    </script>
+    
+</body>
+</html>

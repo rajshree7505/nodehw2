@@ -1,0 +1,177 @@
+<%- include('partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://img.freepik.com/free-vector/gradient-geometric-design-dark-background_23-2148425667.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Navbar styles */
+        nav {
+            background-color: black;
+            padding: 10px;
+            position: fixed; /* Changed to fixed */
+            top: 0; /* Positioned from top */
+            width: 100%; /* Full width */
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start; /* Aligned items to the left */
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main form container */
+        .main {
+            margin-top: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form styling */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #dc3545;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Submit button */
+        .btn-signup {
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-signup:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 768px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="/login">Home</a></li> <!-- Links to the login page -->
+
+
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="form-container">
+            <h1>Create an account</h1>
+            <form action="/signup/submit" method="post">
+                <div class="form-group">
+                    <label>Firstname:</label>
+                    <input type="text" class="form-control" name="firstname" placeholder="Enter Firstname" required>
+                </div>
+                <div class="form-group">
+                    <label>Lastname:</label>
+                    <input type="text" class="form-control" name="lastname" placeholder="Enter Lastname" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number:</label>
+                    <input type="text" class="form-control" name="mobileno" placeholder="Enter Mobile Number" required>
+                </div>
+                <div class="form-group">
+                    <label>Country Code:</label>
+                    <input type="text" class="form-control" name="countrycode" placeholder="Enter Country Code" required>
+                </div>
+                <div class="form-group">
+                    <label>Aadhar Card No:</label>
+                    <input type="text" class="form-control" name="aadharCardno" placeholder="Enter Aadhar Card No" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password:</label>
+                    <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn-signup">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<%- include('partials/footer.ejs') %>

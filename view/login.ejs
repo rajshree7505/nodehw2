@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PROJECT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+          /*  background: url('https://png.pngtree.com/thumb_back/fh260/background/20230718/pngtree-contemporary-authentic-3d-renderings-of-web-login-page-templates-image_3904126.jpg') no-repeat center center fixed; */
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Left Side (Login Form) */
+        .login-section {
+            flex: 1;
+            background: url('https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg');
+          /* background-color: rgba(255, 255, 255, 0.8);  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .login-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .login-section form {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+
+        .login-section input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-section button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Right Side (Welcome & Signup Section) */
+        .welcome-section {
+            flex: 1;
+            background: url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg');
+           /* background-color: rgba(0, 0, 0, 0.6);  */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .welcome-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section .signup-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Login Form -->
+        <div class="login-section">
+            <h2 class="styled-heading">  <style >.styled-heading {
+              font-size: 36px; /* Increase the font size */
+              color:white; /* Dark blue color */
+              text-align: center; /* Center the text */
+              text-transform: uppercase; /* Make all letters uppercase */
+              letter-spacing: 2px; /* Add space between letters */
+              margin-bottom: 20px; /* Add space below the heading */
+              font-weight: bold; /* Make the text bold */
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+          }
+          </style>Enter Your Details</h2>
+         <form action="/login" method="post">                  <!--loginuser-->
+                 <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Right Section: Welcome & Signup -->
+        <div class="welcome-section">
+            <h1>Welcome to RDMU</h1>
+            <style>
+              .welcome-section {
+                  flex: 1;
+                  background-color: rgba(0, 0, 0, 0.6);
+                  color: white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  padding-top: 50px; /* Moves the content slightly down */
+                  text-align: center;
+              }
+      
+              /* Welcome Text: Move it a bit higher */
+              .welcome-section h1 {
+                  font-size: 36px;
+                  margin-bottom: 20px;
+                  margin-top: 0; /* Ensure there's no space above */
+                  position: relative;
+                  top: -60px; /* Moves the text higher */
+              }
+      
+              /* Oval Logo */
+              .welcome-section img {
+                  width: 150px;
+                  background-color: white;
+                  height: 200px;
+                  border-radius: 50%; /* Makes the logo oval */
+                  margin-bottom: 20px;
+              }
+      
+              /* Signup Button */
+              .signup-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px; /* Adds space between the logo and the signup button */
+}
+
+      
+          </style>
+            <img src="https://www.getadmissioninfo.com/uploads/topics/RD%20Engineering%20College,%20Ghaziabad%20logo.png"alt="R.D. Logo">
+            <button class="signup-btn" onclick="location.href='/signup'">Sign Up</button>
+        </div>
+    </div>
+</body>
+</html>
